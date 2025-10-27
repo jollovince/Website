@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odette Quesada</title>
+
+  <!-- ===== CSS FILES ===== -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/music.css">
+  <link rel="stylesheet" href="css/concert.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/award.css">
+
+  <!-- ===== FONT ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- ✅ Font Awesome CDN (for social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Smooth scroll for nav links -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <div id="header"></div>
+
+  <!-- ===== HOME SECTION ===== -->
+  <section id="home">
+    <!-- Hero section with background image only -->
+  </section>
+
+  <!-- ===== MAIN SECTIONS (Loaded Dynamically via script.js) ===== -->
+  <div id="about-section"></div>
+  <div id="news-section"></div>
+  <div id="music-section"></div>
+  <div id="concert-section"></div>
+  <div id="awards-section"></div>
+  <div id="contact-section"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer"></div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="script.js"></script>
+  <script src="concert/concert.js"></script>
+  <script>
+  // Load header and footer dynamically
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  });
+</script>
+</body>
+</html>

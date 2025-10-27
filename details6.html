@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album Page</title>
+  <link rel="stylesheet" href="css/details.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+  <!-- ===== BACK BUTTON ===== -->
+  <div class="back-button-container">
+    <a href="index.html" class="back-btn" onclick="history.back()">← Back</a>
+  </div>
+
+
+  <!-- ===== HERO BANNER ===== -->
+<section class="hero-banner">
+  <img src="images/EOSR7769.jpg" alt="Album Banner">
+  <div class="overlay"></div>
+  <div class="hero-content">
+</section>
+
+  
+  <!-- ===== LISTEN NOW ===== -->
+  <section class="listen-header">
+    <h1>Album</h1>
+  </section>
+
+  <!-- ===== ALBUM DESCRIPTION (added here) ===== -->
+    <div class="album-description">
+      <p>
+Showing a different facet of her genius, this record is a charming mix of folk-pop influences and introspective ballads. It's the sound of a young composer finding her own unique voice. Explore her roots.
+
+
+      </p>
+    </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <section class="album-section">
+    <!-- Album Cover -->
+    <div class="album-cover">
+      <img src="images/IMG_00002-scaled-e1747493023703.webp" alt="Album Cover">
+    </div>
+
+<!-- Tracklist -->
+<div class="album-songs">
+  <h2>Track list</h2>
+
+  <div class="song-columns">
+    <!-- Column 1 -->
+    <ol>
+      <li onclick="playSong('song1', this)">Free & Easy</li>
+      <li onclick="playSong('song2', this)">Could It Be</li>
+      <li onclick="playSong('song3', this)">Once Upon A Time</li>
+      <li onclick="playSong('song4', this)">I Am Here For Good</li>
+      <li onclick="playSong('song5', this)">I Don’t Know When</li>
+    </ol>
+
+    <!-- Column 2 -->
+    <ol start="6">
+      <li onclick="playSong('song6', this)">Rock & Roll - Lately</li>
+      <li onclick="playSong('song7', this)">Where Can I Find</li>
+      <li onclick="playSong('song8', this)">Getting Over You</li>
+      <li onclick="playSong('song9', this)">Any Minute Now</li>
+      <li onclick="playSong('song10', this)">Sorry About The Erasures</li>
+    </ol>
+  </div>
+
+  <!-- Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- LISTEN NOW BUTTON -->
+  <div class="listen-btn-container">
+    <a href="https://open.spotify.com/album/1YAh3P5ZthNwMFHLdozJfi?si=LXaRkIpxRH2DOujCmYzq5w" class="listen-btn" target="_blank">🎧 Listen Now</a>
+  </div>
+
+  <!-- AUDIO FILES -->
+  <audio id="song1" src="audio/song1.mp3"></audio>
+  <audio id="song2" src="audio/song2.mp3"></audio>
+  <audio id="song3" src="audio/song3.mp3"></audio>
+  <audio id="song4" src="audio/song4.mp3"></audio>
+  <audio id="song5" src="audio/song5.mp3"></audio>
+  <audio id="song6" src="audio/song6.mp3"></audio>
+  <audio id="song7" src="audio/song7.mp3"></audio>
+  <audio id="song8" src="audio/song8.mp3"></audio>
+  <audio id="song9" src="audio/song9.mp3"></audio>
+  <audio id="song10" src="audio/song10.mp3"></audio>
+</div>
+
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer"></div>
+
+<script src="album/album.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

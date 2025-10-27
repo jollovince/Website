@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album Page</title>
+  <link rel="stylesheet" href="css/details.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+  <!-- ===== BACK BUTTON ===== -->
+  <div class="back-button-container">
+    <a href="index.html" class="back-btn" onclick="history.back()">← Back</a>
+  </div>
+
+
+  <!-- ===== HERO BANNER ===== -->
+<section class="hero-banner">
+  <img src="images/EOSR7769.jpg" alt="Album Banner">
+  <div class="overlay"></div>
+  <div class="hero-content">
+</section>
+
+  
+  <!-- ===== LISTEN NOW ===== -->
+  <section class="listen-header">
+    <h1>Album</h1>
+  </section>
+
+  
+     <!-- ===== ALBUM DESCRIPTION (added here) ===== -->
+    <div class="album-description">
+      <p>
+       This album marks Odette's foray into the polished, sophisticated sound of the early nineties. A journey through vulnerability and emotional honesty that beautifully balance her lyrical depth with a more contemporary sound. Rediscover the elegance.
+
+
+      </p>
+    </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <section class="album-section">
+    <!-- Album Cover -->
+    <div class="album-cover">
+      <img src="images/IMG_00001-scaled-e1747493129867.webp" alt="Album Cover">
+    </div>
+
+ <!-- Tracklist -->
+<div class="album-songs">
+  <h2>Track list</h2>
+
+  <div class="song-columns">
+    <!-- Column 1 -->
+    <ol>
+      <li onclick="playSong('song1', this)">Sa’yo Lang</li>
+      <li onclick="playSong('song2', this)">Tell Me Why</li>
+      <li onclick="playSong('song3', this)">Love Me Just The Way I Am</li>
+      <li onclick="playSong('song4', this)">If Love</li>
+      <li onclick="playSong('song5', this)">Pasulyap Sulyap</li>
+    </ol>
+
+    <!-- Column 2 -->
+    <ol start="6">
+      <li onclick="playSong('song6', this)">Careless</li>
+      <li onclick="playSong('song7', this)">Only In My Dreams</li>
+      <li onclick="playSong('song8', this)">My Life</li>
+      <li onclick="playSong('song9', this)">More Than I Should</li>
+      <li onclick="playSong('song10', this)">I Can’t Let You Walk Away</li>
+    </ol>
+  </div>
+
+  <!-- Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- LISTEN NOW BUTTON -->
+  <div class="listen-btn-container">
+    <a href="https://open.spotify.com/album/4cWgVSyEfmUL05r1IXPGCy?si=CkxokmDWTyWRnjbI73_0nA" class="listen-btn" target="_blank">🎧 Listen Now</a>
+  </div>
+
+  <!-- AUDIO FILES -->
+  <audio id="song1" src="audio/song1.mp3"></audio>
+  <audio id="song2" src="audio/song2.mp3"></audio>
+  <audio id="song3" src="audio/song3.mp3"></audio>
+  <audio id="song4" src="audio/song4.mp3"></audio>
+  <audio id="song5" src="audio/song5.mp3"></audio>
+  <audio id="song6" src="audio/song6.mp3"></audio>
+  <audio id="song7" src="audio/song7.mp3"></audio>
+  <audio id="song8" src="audio/song8.mp3"></audio>
+  <audio id="song9" src="audio/song9.mp3"></audio>
+  <audio id="song10" src="audio/song10.mp3"></audio>
+</div>
+
+
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer"></div>
+
+<script src="album/album.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

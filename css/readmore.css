@@ -1,0 +1,252 @@
+/* ===== GLOBAL STYLE ===== */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f2f2;
+  color: #111;
+  line-height: 1.8;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-button-container {
+  position: fixed;
+  top: 20px;
+  left: 25px;
+  z-index: 9999;
+}
+
+.back-btn {
+  background-color: #CD1C18;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(205, 28, 24, 0.4);
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  background-color: #F9B234;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ===== BANNER SECTION ===== */
+#banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+#banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: brightness(80%);
+  transition: transform 1s ease;
+}
+
+#banner img:hover {
+  transform: scale(1.03);
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-overlay h1 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* ===== NEWS SECTION ===== */
+#news {
+  padding: 100px 10%;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+#news-title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem; /* 🔹 same as ABOUT */
+  font-weight: 300; /* 🔹 manipis look */
+  letter-spacing: 8px; /* 🔹 wide spacing */
+  color: #111;
+  text-align: center;
+  margin: 10px 0 15px; /* 🔹 dating 60px, binawasan para umangat */
+  position: relative;
+  display: inline-block;
+}
+
+#news-title::after {
+  content: "";
+  display: block;
+  width: 120px; /* 🔹 same underline width as ABOUT */
+  height: 5px; /* 🔹 same underline thickness */
+  background-color: #111;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== NEWS CONTAINER ===== */
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* ===== NEWS ITEM ===== */
+.news-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.news-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.news-img img {
+  width: 550px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.news-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.news-content {
+  flex: 1;
+  text-align: left;
+}
+
+.news-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.news-date {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.news-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.9;
+}
+
+.read-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1.5px solid #111;
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.read-btn:hover {
+  background-color: #111;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  #banner {
+    height: 55vh;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .news-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .news-content p {
+    font-size: 1rem;
+  }
+
+  .news-container {
+    gap: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .news-content {
+    text-align: center;
+  }
+
+  .news-img img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .read-btn {
+    font-size: 0.9rem;
+  }
+
+  #news {
+    padding: 80px 6%;
+  }
+
+  #news-title {
+    font-size: 2rem;
+    letter-spacing: 6px;
+  }
+
+  #news-title::after {
+    width: 80px;
+    height: 4px;
+  }
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

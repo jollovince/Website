@@ -1,0 +1,124 @@
+/* ===== ALBUMS SECTION STYLES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&family=Raleway:wght@200;300;400;500&display=swap');
+
+#albums {
+  position: relative;
+  padding: 120px 8%;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../images/albums-bg.webp') center center / cover no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* ===== ALBUMS TITLE ===== */
+#albums .section-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: clamp(40px, 6vw, 65px);
+  margin-bottom: 60px;
+}
+
+/* ===== ALBUM DESCRIPTION ===== */
+.album-desc {
+  max-width: 800px;
+  margin-top: -150px;
+  color: #ccc;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ===== ALBUM GRID ===== */
+.album-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== ALBUM CARD ===== */
+.album-card {
+  background-color: rgba(20, 20, 20, 0.6);
+  border-radius: 10px;
+  padding: 25px;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.album-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(249, 178, 52, 0.25);
+}
+
+.album-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.album-card:hover img {
+  transform: scale(1.03);
+}
+
+/* ===== ALBUM TITLE AND INFO ===== */
+.album-card h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.album-card p {
+  font-size: 15px;
+  color: #F9B234;
+  margin-bottom: 12px;
+}
+
+/* ===== BUTTONS ===== */
+.album-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  border: 2px solid #F9B234;
+  padding: 8px 22px;
+  border-radius: 25px;
+  color: #F9B234;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-weight: 400;
+}
+
+.btn:hover {
+  background: #F9B234;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .album-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .album-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  #albums .section-title {
+    font-size: 34px;
+  }
+}

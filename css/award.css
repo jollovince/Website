@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: gray;
+  color: #fff;
+}
+
+/* ===== TITLE ===== */
+.section-title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+/* ===== WRAPPER ===== */
+.awards-wrapper {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ===== YEAR BLOCK ===== */
+.award-year-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border-bottom: 2px solid #222;
+  padding-bottom: 60px;
+  background-color: black;
+}
+
+/* ===== YEAR LABEL ===== */
+.year {
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 10px 25px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  text-align: center;
+  min-width: 90px;
+}
+
+/* ===== TEXT CONTENT ===== */
+.award-list {
+  flex: 2;
+}
+
+.award-list h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.award-list p {
+  margin: 4px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* ===== BUTTON ===== */
+.btn-read {
+  display: inline-block;
+  background: #ffc54d;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 25px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-read:hover {
+  background: #ffdd76;
+}
+
+/* ===== IMAGE STYLE ===== */
+.award-image img {
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.15);
+  transition: transform 0.3s ease;
+}
+
+.award-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .award-year-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .award-image img {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .year {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 45px;
+  }
+
+  .award-year-block {
+    padding-bottom: 40px;
+  }
+}
+

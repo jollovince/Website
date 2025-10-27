@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== FOOTER CONTAINER ===== */
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  color: WHITE;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+/* ===== BACKGROUND IMAGE ===== */
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../images/EOSR7764-scaled.webp") no-repeat center center/cover;
+  z-index: 1;
+  filter: brightness(1);
+}
+
+/* ===== DARK OVERLAY ===== */
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* ===== CONTENT ===== */
+.footer-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ===== TITLE ===== */
+.footer-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+  color: white;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-links {
+  display: flex;
+  gap: 22px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffb700;
+  transform: scale(1.15);
+}
+
+/* ===== NAVIGATION LINKS ===== */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #ffb700;
+}
+
+/* ===== COPYRIGHT ===== */
+.footer-copy {
+  font-size: 13px;
+  color: #ddd;
+  margin-top: 5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer {
+    min-height: 450px;
+    padding: 30px 20px;
+  }
+
+  .footer-title {
+    font-size: 28px;
+  }
+
+  .social-links {
+    gap: 18px;
+  }
+
+  .social-links a {
+    font-size: 20px;
+  }
+
+  .footer-nav {
+    gap: 15px;
+  }
+
+  .footer-nav a {
+    font-size: 13px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    min-height: 400px;
+    padding: 25px 15px;
+  }
+
+  .footer-title {
+    font-size: 24px;
+  }
+
+  .footer-content {
+    gap: 20px;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-links a {
+    font-size: 18px;
+  }
+
+  .footer-nav {
+    gap: 12px;
+  }
+
+  .footer-nav a {
+    font-size: 12px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+  }
+}
+
+

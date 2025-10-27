@@ -1,0 +1,45 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== HOME SECTION ONLY ===== */
+#home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("../images/Quesada.png") no-repeat center center/cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== RESPONSIVE (HOME ONLY) ===== */
+@media (max-width: 1024px) {
+  #home {
+    background-position: center center;
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+    background-position: center top;
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    background-position: center top;
+  }
+}

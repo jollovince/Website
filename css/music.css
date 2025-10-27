@@ -1,0 +1,207 @@
+/* ===== GLOBAL FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&family=Raleway:wght@200;300;400;500&display=swap');
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== TITLE FONT STYLE ===== */
+.modern-title,
+.section-title,
+#newrelease h1 {
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 300 !important;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: #fff;
+  font-size: clamp(40px, 6vw, 65px);
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  top: -90px;
+}
+
+/* ===== NEW RELEASE SECTION ===== */
+#newrelease {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 5%;
+  color: #fff;
+  text-align: left;
+  overflow: hidden;
+}
+
+/* 🎬 Background Video */
+#newrelease .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.45;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+/* Overlay for readability */
+#newrelease .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.45);
+  z-index: 1;
+}
+
+/* ===== CONTAINER ===== */
+.release-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ⬅️ ilipat pakaliwa */
+  gap: 25px; /* dikit pa rin image at details */
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-Right: 320px; /* ⬅️ adjust mo kung gusto mas kaliwa pa (try 5% o 10%) */
+  flex-wrap: wrap;
+}
+
+/* ===== LEFT: IMAGE ===== */
+.release-image {
+  flex: 1 1 300px;
+  text-align: center;
+  order: 1;
+}
+
+.release-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-right: 0; /* ❌ tinanggal margin para dumikit */
+  margin-bottom: 0;
+}
+
+.release-image img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 35px rgba(249, 178, 52, 0.35);
+}
+
+/* ===== RIGHT: TEXT DETAILS ===== */
+.release-info {
+  flex: 1 1 400px;
+  text-align: left;
+  order: 10;
+}
+
+.release-info h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  font-size: clamp(28px, 3.5vw, 40px);
+  text-transform: uppercase;
+  color: #F9B234;
+  margin-bottom: 15px;
+  letter-spacing: 6px;
+}
+
+.release-info p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+/* ===== PLATFORM BUTTONS ===== */
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.platform {
+  border: 2px solid #F9B234;
+  padding: 10px 24px;
+  color: #F9B234;
+  font-weight: 400;
+  border-radius: 25px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.platform:hover {
+  background-color: #F9B234;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Highlight Button */
+.platform.listen-btn {
+  background: #F9B234;
+  color: #000;
+  font-weight: 500;
+}
+
+.platform.listen-btn:hover {
+  background-color: #F9B234;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .release-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding-left: 0; /* balik sa gitna pag maliit screen */
+  }
+
+  .release-info {
+    text-align: center;
+  }
+
+  .release-image img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  #newrelease h1 {
+    top: -30px;
+  }
+
+  .release-info h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modern-title,
+  .section-title,
+  #newrelease h1,
+  #newrelease h2 {
+    font-size: 34px;
+    letter-spacing: 6px;
+  }
+
+  #newrelease h1 {
+    top: -20px;
+  }
+
+  .platform {
+    width: 80%;
+    text-align: center;
+  }
+}

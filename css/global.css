@@ -1,0 +1,220 @@
+/* ==============================
+   GLOBAL FONT SETTINGS
+   ============================== */
+
+/* === Import Telegraf Font === */
+@font-face {
+  font-family: "Telegraf";
+  src: url("../fonts/PPTelegraf-UltraboldSlanted-BF6417cecc46fe3.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Import Google Fonts (for body text) === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap');
+
+/* ==============================
+   GLOBAL STYLES
+   ============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent images from overflowing */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Headings — use Telegraf for bold titles */
+h1, h2, h3, .odette-name {
+  font-family: "Telegraf", "Poppins", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #CD1C18;
+}
+
+/* Paragraphs */
+p {
+  font-family: 'Poppins', sans-serif;
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #CD1C18;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* ==============================
+   SECTION LAYOUT (COMPACT VERSION)
+   ============================== */
+section {
+  min-height: auto; /* 🔹 removed forced 100vh */
+  padding: 80px 40px; /* 🔹 smaller height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  width: 100%;
+}
+
+/* ✅ Section divider line (bottom line, thinner & shorter) */
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #F9B234, transparent);
+  opacity: 0.4;
+  border-radius: 2px;
+}
+
+/* Remove divider from home section */
+section#home::after {
+  content: none;
+}
+
+/* Container Block (used for About, Music, etc.) */
+.block {
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  padding: 40px 30px; /* 🔹 smaller padding */
+  width: 85%;
+  max-width: 900px;
+  text-align: center;
+  margin-top: 30px; /* 🔹 less top space */
+}
+
+/* Headings inside block */
+.block h2 {
+  font-size: clamp(1.3rem, 2vw + 0.8rem, 2rem);
+  margin-bottom: 10px;
+}
+
+/* Paragraphs inside block */
+.block p {
+  font-size: clamp(0.9rem, 1vw + 0.4rem, 1rem);
+  line-height: 1.6;
+}
+
+/* ==============================
+   RESPONSIVE SETTINGS
+   ============================== */
+
+/* ===== TABLET VIEW (769px - 1024px) ===== */
+@media (max-width: 1024px) {
+  section {
+    padding: 70px 30px;
+  }
+
+  .block {
+    padding: 35px 25px;
+    width: 90%;
+  }
+
+  h1, h2, h3 {
+    font-size: clamp(1.3rem, 2vw + 0.6rem, 1.8rem);
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== MOBILE VIEW (≤768px) ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+    gap: 10px;
+  }
+
+  .block {
+    padding: 30px 20px;
+    margin-top: 20px;
+    width: 95%;
+  }
+
+  h1, h2 {
+    font-size: clamp(1.3rem, 6vw, 1.8rem);
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  footer {
+    font-size: 12.5px;
+    padding: 18px 10px;
+  }
+}
+
+/* ===== SMALL MOBILE (≤480px) ===== */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 15px;
+  }
+
+  .block {
+    padding: 25px 15px;
+    width: 100%;
+  }
+
+  h1, h2 {
+    font-size: clamp(1.1rem, 7vw, 1.4rem);
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+    line-height: 1.6;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px 8px;
+  }
+}

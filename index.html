@@ -54,6 +54,42 @@
   <script src="script.js"></script>
   <script src="concert/concert.js"></script>
   <script>
+    // Load footer after all content
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("footer.html")
+        .then(res => res.text())
+        .then(data => {
+          const footerElement = document.getElementById("footer");
+          if (footerElement) {
+            footerElement.innerHTML = data;
+            console.log("✅ Footer loaded at the bottom");
+          }
+        })
+        .catch(err => console.error("❌ Error loading footer:", err));
+    });
+  </script>
+</body>
+</html>
+  <!-- ===== HOME SECTION ===== -->
+  <section id="home">
+    <!-- Hero section with background image only -->
+  </section>
+
+  <!-- ===== MAIN SECTIONS (Loaded Dynamically via script.js) ===== -->
+  <div id="about-section"></div>
+  <div id="news-section"></div>
+  <div id="music-section"></div>
+  <div id="concert-section"></div>
+  <div id="awards-section"></div>
+  <div id="contact-section"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer"></div>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="script.js"></script>
+  <script src="concert/concert.js"></script>
+  <script>
   // Load header and footer dynamically
   document.addEventListener("DOMContentLoaded", () => {
     fetch("footer.html")
